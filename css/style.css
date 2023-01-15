@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+/* -------------------------
+ Maximum Used Property
+---------------------------- */
+.navbar, .banner, .quick-list, .features, .some-facts, .our-sponsors, .extra-part
+{
+    display: flex;
+    padding: 20px 100px;
+}
+
+/*-------------------------
+ Header Navbar & Menu Design
+-------------------------- */
+header, footer
+{
+    background-color: rgba(255, 144, 14, 10%);
+}
+.navbar
+{
+    justify-content: space-between;
+}
+.menus > ul
+{
+    list-style: none;
+}
+.menus > ul li
+{
+    display: inline-block;
+    margin-right: 4px;
+}
+.menus > ul li a
+{
+    text-decoration: none;
+    color: #000;
+}
+/*-------------------------
+ Header Banner Design
+-------------------------- */
+.banner
+{
+    flex-direction: column;
+    align-items: center;
+}
+.banner > h4
+{
+    font-weight: 900;
+    font-size: 64px;
+    text-align: center;
+}
+.banner > p
+{
+    text-align: center;
+    font-size: 26;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+button
+{
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #FF900E;
+}
+.banner > img
+{
+    max-width: 100%;
+}
+
+/* --------------------
+ Four Section Design
+----------------------- */
+.quick-list > .team
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.team > img
+{
+    max-width: 280px;
+}
+.quick-list-text
+{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+    align-items: left;
+    justify-content: center;
+}
+.quick-list-text h4
+{
+    font-size: 26px;
+    line-height: 1.5;
+    color: #858585;
+}
+
+/* features you will love & enjoy */
+.features
+{
+    gap: 15px;
+}
+.features .content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feature-core
+{
+    border-left: 8px solid #FF900E;
+    padding-left: 20px;
+    font-size: 38px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.feature-text
+{
+    width: 580px;
+}
+.feature-item
+{
+    width: 530px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 3px 3px 3px 3px rgba(143, 141, 141, 0.2);;
+}
+.architect
+{
+    position: relative;
+}
+.architect > img
+{
+    max-width: 100%;
+}
+.experience
+{
+    background-color: #FF900E;
+    position: absolute;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;text-align: center;
+    font-weight: 600;
+    width: 110px;
+    height: 60px;
+    left: -30px;
+    bottom: 5px;
+
+}
+.some-facts h4, .our-sponsors h4
+{
+    font-size: 20px;
+}
+.some-facts p, .our-sponsors p
+{
+    font-size: 14px;
+    padding: 10px;
+}
+.some-facts, .our-sponsors
+{
+    flex-direction: column;
+    text-align: center;
+}
+.facts-item, .sponsors-item
+{
+    display: flex;
+    justify-content: space-around;
+}
+/* -------------
+ Extra Part & Footer Design
+ --------------- */
+.extra-part
+{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid #606060;
+    margin-bottom: 5px;
+}
+.extra-part .content
+{
+    width: 290px;
+}
+footer
+{
+    text-align: center;
+    padding: 20px;
+}
+
+/* -----------------
+ Responsive Style
+-------------------- */
+
+@media only screen and (max-width: 576px) {
+    /* Navbar & Banner */
+    .navbar, .banner, .quick-list, .features, .some-facts, .our-sponsors, .extra-part
+    {
+        padding: 10px;
+    }
+    .navbar
+    {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #606060;
+    }
+    .banner > h4
+    {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .banner > p
+    {
+        font-size: 12px;
+    }
+    .banner > button
+    {
+        scale: .9;
+        color: #5b3fc2;
+    }
+
+    /* Main Area Section */
+    .quick-list
+    {
+        flex-direction: column-reverse;
+    }
+    .quick-list > .team
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .team > img
+    {
+        margin: auto;
+    }
+    h4, p
+    {
+        text-align: center;
+    }
+    .features
+    {
+        flex-direction: column;
+    }
+    .feature-core
+    {
+        font-size: 24px;
+        text-align: left;
+    }
+    .feature-text
+    {
+        text-align: left;
+        width: 340px;
+    }
+    .feature-item
+    {
+        width: 300px;
+    }
+    .feature-item p
+    {
+        margin-top: 5px;
+        text-align: left;
+    }
+    .architect > img
+    {
+        max-width: 100%;
+    }
+    .experience
+    {
+        left: 28%;
+        bottom: -40px;
+    }
+    .some-facts 
+    {
+        margin-top: 25px;
+    }
+    .facts-item, .sponsors-item
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sponsors-item img
+    {
+        gap: 10px;
+        margin: auto;
+        max-width: 146px;
+    }
+    .extra-part
+    {
+        flex-direction: column;
+    }
+}
